@@ -1,5 +1,5 @@
-  -- LSP Plugins
-  return {
+-- LSP Plugins
+return {
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -130,6 +130,8 @@
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
+        html = {},
+        cssls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -182,4 +184,4 @@
       vim.lsp.enable 'lua_ls'
     end,
   },
-  }
+}
