@@ -142,16 +142,17 @@ return {
       --    :Mason
       --
       -- You can press `g?` for help in this menu.
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
-        'lua-language-server', -- Lua Language server
-        'stylua', -- Used to format Lua code
-        -- You can add other tools here that you want Mason to install
+      local ensure_installed = {
+        -- Languages
+        'lua-language-server', 
         'angular-language-server',
         'html-lsp',
         'css-lsp',
+
+        -- Tools
+        'stylua', -- Used to format Lua code
         'prettier',
-      })
+      }
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
