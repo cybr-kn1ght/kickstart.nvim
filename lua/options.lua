@@ -71,7 +71,6 @@ vim.o.confirm = true
 
 -- Column width
 vim.opt.colorcolumn = '80'
-vim.opt.textwidth = 80
 vim.opt.ruler = true
 
 -- vim: ts=2 sts=2 sw=2 et
