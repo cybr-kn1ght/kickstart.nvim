@@ -12,6 +12,11 @@ return {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
+        overrides = function(colors)
+          return {
+            Visual = { bg = '#264D9A', fg = 'NONE' },
+          }
+        end,
       }
 
       -- Load the colorscheme here.
