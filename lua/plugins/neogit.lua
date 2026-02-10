@@ -23,6 +23,12 @@ return {
           diffview = true,
         },
       }
+
+      -- Close Diffview with `q`
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'DiffviewFiles', 'DiffviewFileHistory' },
+        callback = function(ev) vim.keymap.set('n', 'q', '<cmd>DiffviewClose<CR>', { buffer = ev.buf, silent = true }) end,
+      })
     end,
   },
 }
