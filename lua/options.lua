@@ -76,4 +76,7 @@ vim.opt.ruler = true
 -- Colour
 vim.opt.termguicolors = true
 
+-- Tabs
+vim.o.showtabline = 0 -- 0 = never show, 1 = only if >1 tabs, 2 = always
+
 -- vim: ts=2 sts=2 sw=2 et
