@@ -55,37 +55,37 @@ return {
 
           center = {
             {
-              icon = '  ',
+              icon = '+ ',
               desc = 'New File',
               key = 'n',
               action = 'enew',
             },
             {
-              icon = '󰈞  ',
+              icon = '> ',
               desc = 'Find File',
               key = 'f',
               action = 'Telescope find_files',
             },
             {
-              icon = '󰊄  ',
+              icon = '> ',
               desc = 'Recent Files',
               key = 'r',
               action = 'Telescope oldfiles',
             },
             {
-              icon = '󰈭  ',
+              icon = '* ',
               desc = 'Find Word',
               key = 'g',
               action = 'Telescope live_grep',
             },
             {
-              icon = '  ',
+              icon = '~ ',
               desc = 'Config',
               key = 'c',
               action = 'edit $MYVIMRC',
             },
             {
-              icon = '󰗼  ',
+              icon = 'x ',
               desc = 'Quit',
               key = 'q',
               action = 'qa',
