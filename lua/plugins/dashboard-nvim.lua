@@ -9,8 +9,6 @@ return {
       local large_header = {
         '    ',
         '    ',
-        '    ',
-        '    ',
         '=================     ===============     ===============   ========  ========',
         '\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //',
         '||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\\/ . . .||',
@@ -41,7 +39,6 @@ return {
         '          ░    ░  ░    ░ ░        ░   ░         ░    ',
         '                                 ░                   ',
         '    ',
-        '    ',
       }
 
       local small_header = {
@@ -65,7 +62,7 @@ return {
 
         local out = { '    ', '    ' }
 
-        local header = h < 55 and small_header or large_header
+        local header = h < 45 and small_header or large_header
         for _, line in ipairs(header) do
           table.insert(out, line)
         end
