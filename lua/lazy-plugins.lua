@@ -25,7 +25,6 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
 
   require 'plugins.gitsigns',
-  require 'plugins.neogit',
   require 'plugins.which-key',
   require 'plugins.telescope',
   require 'plugins.lspconfig',
