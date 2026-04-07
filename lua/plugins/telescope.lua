@@ -105,25 +105,25 @@ return {
         callback = function(event)
           local buf = event.buf
 
-          -- Find references for the word under your cursor.
-          vim.keymap.set('n', '<leader>gr', builtin.lsp_references, { buffer = buf, desc = '[G]oto [R]eferences' })
-
-          -- Jump to the implementation of the word under your cursor.
-          -- Useful when your language has ways of declaring types without an actual implementation.
-          vim.keymap.set('n', '<leader>gi', builtin.lsp_implementations, { buffer = buf, desc = '[G]oto [I]mplementation' })
-
           -- Jump to the definition of the word under your cursor.
           -- This is where a variable was first declared, or where a function is defined, etc.
           -- To jump back, press <C-t>.
           vim.keymap.set('n', '<leader>gd', builtin.lsp_definitions, { buffer = buf, desc = '[G]oto [D]efinition' })
 
+          -- Find references for the word under your cursor.
+          vim.keymap.set('n', '<leader>gu', builtin.lsp_references, { buffer = buf, desc = '[G]oto [U]sages (References)' })
+
+          -- Jump to the implementation of the word under your cursor.
+          -- Useful when your language has ways of declaring types without an actual implementation (eg. Interfaces).
+          vim.keymap.set('n', '<leader>gi', builtin.lsp_implementations, { buffer = buf, desc = '[G]oto [I]mplementation' })
+
           -- Fuzzy find all the symbols in your current document.
           -- Symbols are things like variables, functions, types, etc.
-          vim.keymap.set('n', '<leader>gO', builtin.lsp_document_symbols, { buffer = buf, desc = 'Open Document Symbols' })
+          vim.keymap.set('n', '<leader>gs', builtin.lsp_document_symbols, { buffer = buf, desc = 'Open Document [S]ymbols' })
 
           -- Fuzzy find all the symbols in your current workspace.
           -- Similar to document symbols, except searches over your entire project.
-          vim.keymap.set('n', '<leader>gW', builtin.lsp_dynamic_workspace_symbols, { buffer = buf, desc = 'Open Workspace Symbols' })
+          vim.keymap.set('n', '<leader>gw', builtin.lsp_dynamic_workspace_symbols, { buffer = buf, desc = 'Open [W]orkspace Symbols' })
 
           -- Jump to the type of the word under your cursor.
           -- Useful when you're not sure what type a variable is and you want to see
